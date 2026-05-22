@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew & Bite Café | Local Business</title>
+<style>
+  :root { --primary:#8B4513; --accent:#D4A017; --light:#FFF8F0; --dark:#2C1B10; }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;scroll-behavior:smooth}
+  body{background:var(--light);color:var(--dark);line-height:1.6}
+  .container{max-width:1200px;margin:auto;padding:0 20px}
+  header{background:var(--dark);color:white;position:sticky;top:0;z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,0.2)}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:15px 0}
+  .logo{font-size:1.8rem;font-weight:bold;color:var(--accent)}
+  nav ul{display:flex;list-style:none;gap:25px}
+  nav a{color:white;text-decoration:none;font-weight:500;transition:0.3s}
+  nav a:hover{color:var(--accent)}
+  .btn{background:var(--primary);color:white;padding:12px 25px;border:none;border-radius:5px;cursor:pointer;font-weight:600;transition:0.3s;text-decoration:none;display:inline-block}
+  .btn:hover{background:var(--accent)}
+  .hero{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600') center/cover;height:85vh;display:flex;align-items:center;color:white;text-align:center}
+  .hero h1{font-size:3.5rem;margin-bottom:20px}
+  .hero p{font-size:1.2rem;margin-bottom:30px}
+  section{padding:70px 0}
+  h2{text-align:center;font-size:2.5rem;margin-bottom:50px;color:var(--primary)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+  .card{background:white;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);transition:0.3s;text-align:center}
+  .card:hover{transform:translateY(-5px)}
+  .card img{width:100%;height:200px;object-fit:cover;border-radius:8px;margin-bottom:15px}
+  .price{color:var(--primary);font-weight:bold;font-size:1.2rem;margin-top:10px}
+  .about{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+  .about img{width:100%;max-width:500px;border-radius:10px}
+  .contact-form{background:white;padding:30px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);max-width:600px;margin:auto}
+  .contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:5px}
+  footer{background:var(--dark);color:white;text-align:center;padding:30px 0;margin-top:50px}
+  footer a{color:var(--accent);text-decoration:none;margin:0 10px}
+  @media(max-width:768px){nav ul{display:none} .hero h1{font-size:2.5rem} .about{flex-direction:column}}
+  .msg{display:none;background:#d4edda;color:#155724;padding:10px;border-radius:5px;margin:10px 0;text-align:center}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Brew & Bite</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Book Table</a></li>
+      </ul>
+      <a href="#contact" class="btn">Reserve Now</a>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Fresh Coffee, Great Vibes</h1>
+    <p>Your neighborhood café serving handcrafted coffee, fresh pastries & healthy meals since 2020.</p>
+    <a href="#menu" class="btn">Explore Menu</a>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <h2>Our Special Menu</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Rich espresso with steamed milk foam. Perfect start to your day.</p>
+        <div class="price">₹180</div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500" alt="Avocado Toast">
+        <h3>Avocado Toast</h3>
+        <p>Whole grain bread, fresh avocado, cherry tomatoes, microgreens.</p>
+        <div class="price">₹250</div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500" alt="Chocolate Pastry">
+        <h3>Chocolate Pastry</h3>
+        <p>Freshly baked, layered with Belgian chocolate & cream.</p>
+        <div class="price">₹150</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:#fff">
+  <div class="container">
+    <h2>About Us</h2>
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Café Interior">
+      <div>
+        <h3>Why Brew & Bite?</h3>
+        <p>We are a locally owned café in the heart of the city. Our mission: serve high-quality coffee, support local farmers, and build community.</p>
+        <ul style="margin:20px 0;list-style:inside">
+          <li>100% Arabica beans, ethically sourced</li>
+          <li>Fresh bakery items baked daily</li>
+          <li>Free WiFi + Cozy workspaces</li>
+          <li>Open 7am - 10pm, All week</li>
+        </ul>
+        <a href="#contact" class="btn">Visit Us Today</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Book a Table / Contact</h2>
+    <div id="successMsg" class="msg">Thank you! We will contact you soon.</div>
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <select id="people" required>
+        <option value="">Number of People</option>
+        <option>1-2</option><option>3-4</option><option>5+</option>
+      </select>
+      <input type="date" id="date" required>
+      <textarea id="message" placeholder="Special Request" rows="4"></textarea>
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+    <div style="text-align:center;margin-top:40px">
+      <p><strong>Address:</strong> 123 MG Road, Your City, 560001</p>
+      <p><strong>Phone:</strong> +91 98765 43210 | <strong>Email:</strong> hello@brewandbite.com</p>
+      <p style="margin-top:15px">
+        <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Google Maps</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Brew & Bite Café. All Rights Reserved.</p>
+    <p>Built for Task 3 - Local Business Website Project</p>
+  </div>
+</footer>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('successMsg').style.display='block';
+  e.target.reset();
+  setTimeout(()=>{document.getElementById('successMsg').style.display='none'},4000);
+  // For real project: send data to backend/WhatsApp/Google Sheet
+}
+</script>
+
+</body>
+</html>
